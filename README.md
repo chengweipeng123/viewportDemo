@@ -45,7 +45,7 @@
    Layout Viewport Width:980
    ```
 
-   页面的放大，会改变的`Visual Viewport`值。响应的页面元素有缩放。
+   页面的放大，会改变的`Visual Viewport`值。相应的页面元素有缩放。
 
    页面元素视觉上的大小，与设备ScreenWidth值无关，即其本身设置的css 元素大小与设备系统元素大小无关，只与设备默认layout viewport width相关。
 
