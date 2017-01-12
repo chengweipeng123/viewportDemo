@@ -10,7 +10,11 @@
 
 注3：以下viewport衡量单位均为css pixel
 
-1. 页面无meta viewport设置
+注4：CSS元素 默认字体为16px
+
+注5：理想体验为：`idea viewport = visual viewport = layout viewport =screen.width`
+
+1. **页面无meta viewport设置**
 
    ```
    <head>
@@ -43,8 +47,30 @@
 
    页面的放大，会改变的`Visual Viewport`值。响应的页面元素有缩放。
 
-   页面元素css piexl的大小，与设备ScreenWidth值无关。
+   页面元素视觉上的大小，与设备ScreenWidth值无关，即其本身设置的css 元素大小与设备系统元素大小无关，只与设备默认layout viewport width相关。
 
-2. ​
+   缩放值为：
 
-3. ​
+   > 当前缩放值 = ideal viewport宽度  / visual viewport宽度，即320/980。
+
+2. **增加meta viewport 设置**
+
+   ```
+   <head>
+           <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+           <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+       </head>
+   ```
+
+   初始数据值：
+
+   ```
+   ScreenWidth:320
+   Visual Viewport Width:320
+   Layout Viewport Width:320
+   ```
+
+   这时候，达到的理想情况。
+
+   此时，css的font-size因为`ScreenWidth=Layout Viewport Width`的原因，就会和手机系统的字体大小一致起来，也就是说，css里的16px字体与系统的16号字体一样大。
