@@ -25,6 +25,7 @@
                                                     encoding:NSUTF8StringEncoding
                                                        error:nil];
     [self.webView loadHTMLString:htmlCont baseURL:baseURL];
+    [self.webView setScalesPageToFit:YES];
 }
 
 
