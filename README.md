@@ -30,7 +30,7 @@
 
    ​
 
-2. **scalesPageToFit = NO，页面无meta viewport设置**
+2. **scalesPageToFit =  YES，页面无meta viewport设置**
 
    ```
    <head>
@@ -69,7 +69,7 @@
 
    > 当前缩放值 = ideal viewport宽度  / visual viewport宽度，即320/980。
 
-3. **scalesPageToFit = NO，增加meta viewport 设置**
+3. **scalesPageToFit =  YES，增加meta viewport 设置**
 
    ```
    <head>
