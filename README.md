@@ -1,6 +1,6 @@
 # viewportDemo
 
-注1：测试使用iphone5s，iOS10.2，iOS内置UIWebView
+注1：测试使用iphone5s，iOS10.2，iOS内置UIWebView。
 
 注2：在移动开发中，
 
@@ -14,7 +14,23 @@
 
 注5：理想体验为：`idea viewport = visual viewport = layout viewport =screen.width`
 
-1. **页面无meta viewport设置**
+
+
+1. **scalesPageToFit = NO**
+
+   在iOS UIWebView默认情况下，scalesPageToFit为NO：
+
+   ```
+   ScreenWidth:320
+   Visual Viewport Width:320
+   Layout Viewport Width:320
+   ```
+
+   页面自动适配`Visual Viewport Width = Layout Viewport Width`，不可缩放。
+
+   ​
+
+2. **scalesPageToFit = NO，页面无meta viewport设置**
 
    ```
    <head>
@@ -53,7 +69,7 @@
 
    > 当前缩放值 = ideal viewport宽度  / visual viewport宽度，即320/980。
 
-2. **增加meta viewport 设置**
+3. **scalesPageToFit = NO，增加meta viewport 设置**
 
    ```
    <head>
